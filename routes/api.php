@@ -25,5 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [UserController::class, 'registerUser']);
 Route::get('allusers', [UserController::class, 'showAllUsers']);
 Route::post('profile', [UserController::class, 'showProfile']);
+Route::put('update', [UserController::class, 'updateProfile']);
 
 //Endpoints MESSAGE
