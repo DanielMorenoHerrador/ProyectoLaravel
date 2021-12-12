@@ -42,18 +42,11 @@ class UserController extends Controller
         $email = $request->input('email');
         $name = $request->input('name');
         $password = $request->input('password');
-        $gender = $request->input('gender');
-        $orientation = $request->input('orientation');
-        $status = $request->input('status');
-        $intention = $request->input('intention');
-        $age = $request->input('age');
-        $surname = $request->input('surname');
 
         $this -> validate( $request, [
             'name' => 'required|string',
             'email' => 'required|email',
             'password' => 'required|min:8',
-            'age' => 'required|date|before:18 years ago',
         ]);
 
         try {
@@ -62,13 +55,7 @@ class UserController extends Controller
                 [
                     'email' => $email,
                     'name' => $name,
-                    'password' => $password,
-                    'gender' => $gender,
-                    'orientation' => $orientation,
-                    'status' => $status,
-                    'intention' => $intention,
-                    'age' => $age,
-                    'surname' => $surname
+                    'password' => $password
                 ]
                 );
         
@@ -91,12 +78,6 @@ class UserController extends Controller
         $id = $request->input('id');
         $email = $request->input('email');
         $name = $request->input('name');
-        $gender = $request->input('gender');
-        $orientation = $request->input('orientation');
-        $status = $request->input('status');
-        $intention = $request->input('intention');
-        $age = $request->input('age');
-        $surname = $request->input('surname');
 
 
         // try {
@@ -141,4 +122,5 @@ class UserController extends Controller
                 return "Error $codigoError";
             }
         }
+    }
 }

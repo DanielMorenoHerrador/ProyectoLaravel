@@ -18,4 +18,8 @@ class Message extends Model
     {
         return $this->belongsTo('App\Models\User','idusuario','id');
     }
+    public function party()
+    {
+        return $this->belongsTo('App\Models\Party','idparty','id');
+    }
 }

@@ -11,8 +11,7 @@ class User extends Model
 
     //
     protected $fillable = [
-        'email', 'name', 'password', 'gender', 'orientation', 'status', 'intention', 'age', 
-        'surname'
+        'email', 'name', 'password'
     ];
 
     protected $hidden = ['password'];
