@@ -20,15 +20,15 @@ class CreateMessagesTable extends Migration
 
             //Foreign Keys
             $table->unsignedBigInteger('from');
-            $table->foreign('from', 'fk_messages_users')
+            $table->foreign('from', 'fk_message_users')
             ->on('users')
-            ->references('id')
+            ->references('Id')
             ->onDelete('cascade');
 
             $table->unsignedBigInteger('partyId');
-            $table->foreign('partyId', 'fk_messages_partys')
+            $table->foreign('partyId', 'fk_message_partys')
             ->on('partys')
-            ->references('id')
+            ->references('Id')
             ->onDelete('cascade');
 
         });

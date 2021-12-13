@@ -10,16 +10,16 @@ class Message extends Model
     use HasFactory;
 
     protected $fillable = [
-        'message', 'from', 'partyId'
+        'body', 'from', 'partyId'
     ];
 
 
     public function user()
     {
-        return $this->belongsTo('App\Models\User','idusuario','id');
+        return $this->belongsTo('App\Models\User','userID','Id');
     }
     public function party()
     {
-        return $this->belongsTo('App\Models\Party','idparty','id');
+        return $this->belongsTo('App\Models\Party','partyID','Id');
     }
 }
