@@ -19,8 +19,8 @@ class CreateMessagesTable extends Migration
             $table->timestamps();
 
             //Foreign Keys
-            $table->unsignedBigInteger('from');
-            $table->foreign('from', 'fk_message_users')
+            $table->unsignedBigInteger('userID');
+            $table->foreign('userID', 'fk_message_users')
             ->on('users')
             ->references('Id')
             ->onDelete('cascade');

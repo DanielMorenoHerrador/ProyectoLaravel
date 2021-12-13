@@ -34,7 +34,7 @@ class MessageController extends Controller
 
             return Message::create([
 
-                'from' => $user,
+                'userID' => $user,
                 'body' => $message,
                 'partyId' => $partyId
 
