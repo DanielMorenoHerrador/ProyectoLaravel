@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Model
 {
-    use HasFactory, Notifiables;
+    use HasFactory, Notifiable;
 
     //
     protected $fillable = [
