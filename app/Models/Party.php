@@ -9,6 +9,8 @@ class Party extends Model
 {
     use HasFactory;
 
+    protected $table = 'Partys';
+
     protected $fillable = [
         'name', 'gameId'
     ];
