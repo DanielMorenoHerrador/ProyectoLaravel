@@ -26,7 +26,7 @@ class MessageController extends Controller
 
     public function añadirMessage(Request $request) {
 
-        $user = User::id();
+        $user = $request->input('userId');
         $partyId = $request->input('partyId');
         $message = $request->input('body');
 
