@@ -23,8 +23,6 @@ class PartyController extends Controller
 
     public function añadirParty(Request $request) {
 
-
-        $user = User::id();
         $name = $request->input('name');
         $game = $request->input('gameId');
 
