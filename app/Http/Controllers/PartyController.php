@@ -28,9 +28,7 @@ class PartyController extends Controller
 
         try {
 
-            // Aquí primero insertamos el registro en la tabla "Parties", y luego en la tabla "Belongs" para así poder luego buscar los miembros de cada party.
-
-            $party = Party::create([
+            return Party::create([
 
                     'name' => $name,
                     'gameId' => $game
