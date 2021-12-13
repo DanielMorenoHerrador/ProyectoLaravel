@@ -18,12 +18,19 @@ class CreateMessagesTable extends Migration
             $table->string('body');
             $table->timestamps();
 
-            //Claves foráneas
-            $table->unsignedBigInteger('idusuario');              //id empresa que crea la oferta
-            $table->foreign('idusuario', 'fk_mensajes_usuarios')
+            //Foreign Keys
+            $table->unsignedBigInteger('from');
+            $table->foreign('from', 'fk_messages_users')
             ->on('users')
             ->references('id')
-            ->onDelete('restrict');
+            ->onDelete('cascade');
+
+            $table->unsignedBigInteger('partyId');
+            $table->foreign('partyId', 'fk_messages_partys')
+            ->on('partys')
+            ->references('id')
+            ->onDelete('cascade');
+
         });
     }
 

@@ -14,8 +14,17 @@ class CreatePartysTable extends Migration
     public function up()
     {
         Schema::create('partys', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('name');
+
             $table->timestamps();
+
+            //Foreign Keys
+            $table->unsignedBigInteger('gameId');
+            $table->foreign('gameId', 'fk_partys_games')
+            ->on('games')
+            ->references('id')
+            ->onDelete('cascade');
         });
     }
 

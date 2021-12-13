@@ -90,7 +90,6 @@ class UserController extends Controller
         
     }
 
-    ////////////////Borrar Usuario ////////////////
     public function deleteUser(Request $request){
 
         $id = $request->input('id');

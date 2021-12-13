@@ -10,7 +10,13 @@ class Party extends Model
     use HasFactory;
 
     protected $fillable = [
-        'body'
+        'name', 'gameId'
     ];
-    
+
+    public function messages() {
+
+        return $this->hasMany('App\Models\Message');
+
+    }
+
 }
